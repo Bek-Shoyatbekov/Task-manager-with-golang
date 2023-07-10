@@ -1,7 +1,7 @@
-package routes
+package Routes
 
 import (
-	controller "Tasklify/controllers"
+	controller "Tasklify/Controllers"
 	"github.com/gorilla/mux"
 	"log"
 	"net/http"

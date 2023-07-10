@@ -1,9 +1,9 @@
 package main
 
 import (
-	"Tasklify/routes"
+	"Tasklify/Routes"
 )
 
 func main() {
-	routes.Router()
+	Routes.Router()
 }
