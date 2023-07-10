@@ -49,6 +49,12 @@ go  build
   }
 ```
 ** **
+* ### Delete task by id (DELETE Request)
+```
+ http://localhost:3000/delete?id=1
+```
+
+** **
 
 # Thanks
 
