@@ -17,7 +17,7 @@ func DeleteTaskById(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprint(w, http.StatusBadRequest)
 		return
 	}
-	taskId, err := util.GetIdFromQueryParam(w, r)
+	taskId, err := util.GetAndParseIdFromQueryParam(w, r)
 	if err != nil {
 		fmt.Fprint(w, "Id is invalid")
 		return

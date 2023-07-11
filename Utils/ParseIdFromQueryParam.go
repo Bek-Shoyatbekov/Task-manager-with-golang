@@ -6,7 +6,7 @@ import (
 	"strconv"
 )
 
-func GetIdFromQueryParam(w http.ResponseWriter, r *http.Request) (int, error) {
+func GetAndParseIdFromQueryParam(w http.ResponseWriter, r *http.Request) (int, error) {
 	id := r.URL.Query().Get("id")
 	taskId, err := strconv.Atoi(id)
 	if err != nil {

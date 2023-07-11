@@ -13,7 +13,7 @@ func EditTask(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprint(w, http.StatusBadRequest)
 		return
 	}
-	taskId, err := util.GetIdFromQueryParam(w, r)
+	taskId, err := util.GetAndParseIdFromQueryParam(w, r)
 	if err != nil {
 		fmt.Fprint(w, http.StatusBadRequest)
 		return
@@ -40,7 +40,7 @@ func EditTask(w http.ResponseWriter, r *http.Request) {
 			if reqBody.Status != "" {
 				edited.Status = reqBody.Status
 			}
-			newTasks := util.RemoveElementFromSlice(Tasks, i)
+			newTasks := util.RemoveElementFromSliceByIndex(Tasks, i)
 			Tasks = newTasks
 			Tasks = append(Tasks, edited)
 			break

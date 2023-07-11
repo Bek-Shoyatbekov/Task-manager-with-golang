@@ -7,7 +7,7 @@ import (
 )
 
 func GetOneById(w http.ResponseWriter, r *http.Request) {
-	validId, err := util.GetIdFromQueryParam(w, r)
+	validId, err := util.GetAndParseIdFromQueryParam(w, r)
 	if err != nil {
 		fmt.Fprint(w, http.StatusBadRequest)
 		panic(err)

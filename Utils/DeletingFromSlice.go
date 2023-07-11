@@ -12,7 +12,7 @@ func DeleteElementById(tasks []Types.Task, id int) []Types.Task {
 	return tasks
 }
 
-func RemoveElementFromSlice(s []Types.Task, i int) []Types.Task {
+func RemoveElementFromSliceByIndex(s []Types.Task, i int) []Types.Task {
 	s[i] = s[len(s)-1]
 	return s[:len(s)-1]
 }
